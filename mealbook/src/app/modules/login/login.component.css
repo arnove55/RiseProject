@@ -1,0 +1,134 @@
+
+ .heading1, .logincredentials {
+    margin-top: -627px;
+    position: absolute;
+    margin-left: 1043px;
+}
+.logo{
+    margin-top: -650px;
+    position: absolute;
+    margin-left: 1043px;
+}
+/* @media screen and (max-width: 1200px) {
+    .logo, .heading1, .logincredentials {
+        margin-left: 20px; /* Adjust as needed 
+    }
+} */
+
+/* @media screen and (max-width: 768px) {
+    .logo, .heading1, .logincredentials {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .heading1 .subheading1 {
+        padding-left: 0;
+    }
+
+    .fogotpsw {
+        margin-left: 0;
+    }
+
+    .username, .password, .signin {
+    padding-top: 0px; /* Adjust as needed 
+    }
+
+    .psw {
+        padding-top: 10px; /* Adjust as needed 
+    }
+    .uname{
+        padding-top: 20px;
+    }
+
+    .rememberme, .fogotpsw {
+        margin-top: 15px; /* Adjust as needed 
+    }
+} */
+
+p {
+    margin-top: -9px;
+    margin-bottom: 1rem;
+}
+
+.heading1 .subheading1 {
+    color: rgb(231, 11, 11);
+    padding-left: 65px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.heading1 .subheading2 {
+    padding-top: 35px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* .heading1 .subheading3 {
+    padding-top: 10px;
+    font-size: 15px;
+    opacity: 0.8;
+} */
+.subheading3{
+    padding-top: 30px;
+    
+    font-size: large;
+}
+
+.username, .password {
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-top: 5px;
+    width: 100%; /* Adjust as needed */
+    height: 58px;
+    font-size: larger;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+
+.uname {
+    padding-top: 160px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.psw {
+    padding-top: 50px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.cbox {
+    margin-top: 25px;
+    padding-top: 8px;
+    font-size: larger;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    vertical-align: middle;
+}
+
+.rememberme {
+    margin-top: 25px;
+    vertical-align: middle;
+    font-size: large;
+    margin-left: 5px;
+}
+
+.fogotpsw {
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: large;
+    margin-left: 315px;
+}
+
+.signin {
+    background-color: orangered;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%; /* Adjust as needed */
+    height: 57px;
+    margin-left: 0px;
+}

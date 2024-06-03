@@ -1,0 +1,36 @@
+import { Component, OnInit } from '@angular/core';
+import { BookingService } from 'src/app/services/Booking.Services'; 
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
+})
+export class HomeComponent implements OnInit {
+  bookedMeals: any[] = []; // Assuming you have an array of booked meals
+
+  constructor(private bookingService: BookingService) {}
+
+  ngOnInit(): void {
+    // Fetch booked meals from backend on component initialization
+    this.fetchBookedMeals();
+  }
+
+  cancelBooking(bookingId: string) {
+    this.bookingService.cancelBooking(bookingId).subscribe(
+      response => {
+        console.log('Booking canceled successfully:', response);
+        // Refresh booked meals after successful cancellation
+        this.fetchBookedMeals();
+      },
+      error => {
+        console.error('Error canceling booking:', error);
+      }
+    );
+  }
+
+  fetchBookedMeals() {
+    // Implement fetching booked meals from backend
+    // Update this.bookedMeals with the fetched data
+  }
+}

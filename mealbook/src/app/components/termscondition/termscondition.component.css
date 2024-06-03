@@ -1,0 +1,19 @@
+#termsimg{
+    width:100%;
+}
+
+ul{
+    font-size: large;
+}
+li{
+    font-size: medium;
+}
+.welcome{
+    margin-left: 10px;
+}
+.terms{
+    background-color:  rgb(13, 13, 100);
+    width: 100%;
+    color: white;
+    text-align: center;
+}

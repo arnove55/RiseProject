@@ -1,0 +1,31 @@
+<div class="bg-img">
+    <img src="./assets/images/bg.jpg " height="700px" width="1000px" />
+  <div>
+  <div class="logo">
+      <img src="./assets/images/logo.svg" />
+  </div>
+  <div class="heading1">
+      <p class="subheading1">Meal Facility</p>
+      
+  </div>
+  
+  <form [formGroup]="resetPasswordForm">
+  <div class="logincredentials">
+      <label for="User Name" class="uname">Password</label><br>
+      <input type="password" formControlName="password" placeholder="New Password" class="password"><br>
+      <small *ngIf="resetPasswordForm.controls['password'].dirty && resetPasswordForm.hasError('required','password')" class="text-danger">*password required</small>
+      <br>
+      <label for="Password" class="psw">Confirm Password</label><br>
+  
+      <input type="password" formControlName="ConfirmPassword"  placeholder="Confirm Password" class="password"><br>
+      <!-- <span-- (click)="hidepsw()" class="fa {{eyeIcon}}"></span-->
+      <small *ngIf="resetPasswordForm.controls['ConfirmPassword'].dirty && resetPasswordForm.hasError('required','ConfirmPassword')" class="text-danger">*Confirm password required</small>
+      <small *ngIf="resetPasswordForm.hasError('confirmpasswordvalidator','ConfirmPassword')" class="text-danger">*Confirm password required</small>
+      
+      <br> 
+       
+      <button (click)="reset()">Reset</button>
+  </div>
+  </form>
+  
+  

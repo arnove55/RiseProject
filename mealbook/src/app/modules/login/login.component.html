@@ -1,0 +1,144 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+  [fullScreen]="true">
+</ngx-spinner>
+<div class="bg-img">
+  <img src="./assets/images/bg.jpg " height="700px" width="1000px" />
+  <div>
+    <div class="logo">
+      <img src="./assets/images/logo.svg" />
+    </div>
+    <div class="heading1">
+      <p class="subheading1">Meal Facility</p>
+      <p class="subheading2">Sign in to your Account</p>
+     
+    </div>
+
+    <form [formGroup]="loginForm">
+      <div class="logincredentials">
+        <div class="form-group">
+          <label for="User Name" class="uname">User Name</label><br />
+          <input
+            type="text"
+            formControlName="username"
+            placeholder="Username"
+            class="username"
+          /><br />
+          <small
+            *ngIf="
+              loginForm.controls['username'].dirty &&
+              loginForm.hasError('required', 'username')
+            "
+            class="text-danger"
+            >*username required</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="Password" class="psw">Password</label><br />
+
+          <input
+            type="password"
+            formControlName="password"
+            [type]="type"
+            placeholder="Password"
+            class="password"
+          /><br />
+          <span (click)="hidepsw()" class="fa {{ eyeIcon }}"></span>
+          <small
+            *ngIf="
+              loginForm.controls['password'].dirty &&
+              loginForm.hasError('required', 'password')
+            "
+            class="text-danger"
+            >*password required</small
+          ><br>
+        </div>
+       
+          <div class="form-group">
+          <a
+            id="forgot"
+            data-bs-target="#exampleModal"
+            data-bs-toggle="modal"
+            class="fogotpsw"
+            >Forgot password?</a
+          >
+          <p class="subheading3">
+            Enter your credentials or <a routerLink="/signup">Sign Up</a> to access
+            your account
+          </p>
+        </div>
+        <br />
+        <button class="signin" (click)="onSubmit()">Sign In</button>
+      </div>
+    </form>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title" id="exampleModalLabel">
+              <span style="font-size: 25px; font-weight: 700"
+                >Forgot your password</span
+              ><br />
+
+              <small
+                >Please provide your Email we will send the reset link</small
+              >
+            </p>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="recipient-name" class="col-form-label">Email:</label>
+              <input
+                [(ngModel)]="resetPasswordEmail"
+                (ngModelChange)="checkValidEmail($event)"
+                class="form-control"
+                id="recipient-name"
+              />
+              <small *ngIf="!resetPasswordEmail" class="text-danger"
+                >Email is required</small
+              >
+              <small
+                *ngIf="!isvalidEmail && resetPasswordEmail"
+                class="text-danger"
+                >Email is invalid</small
+              >
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="closebtn"
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              id="closebtn"
+              type="button"
+              class="btn btn-primary"
+              (click)="send()"
+            >
+              Send email
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

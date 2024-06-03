@@ -1,0 +1,254 @@
+
+body {
+  overflow-x: hidden;
+}
+.cdk-overlay-container {
+  z-index: 2000 !important; /* Bootstrap modal z-index is 1040 */
+}
+#viewmodal .modal-dialog {
+  overflow-y: initial !important;
+}
+
+#viewmodal .modal-body {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.container{
+
+  align-items: self-start;
+}
+.booking-section{
+  margin-top:55px;
+  margin-left: 140px;
+  padding-top: 10px;
+
+}
+.card{
+  position:absolute;
+  padding-top: 7px;
+  padding-left: 7px ;
+  width: 400px;
+  top:200px;
+  height: 90px;
+  margin-left: 750px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: large;
+}
+.modal-header, .modal-footer{
+  border-bottom: none;
+}
+.modal-body,.modal-footer  {
+
+  margin-top: 0px;
+  border: none;
+}
+::ng-deep .booked-date .mat-calendar-body-cell-content {
+  background-color: #ffcccb !important; /* Light red */
+  border-radius: 50%;
+  color: white;
+}
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-body, .modal-footer {
+  margin-top: 0px;
+  border: none;
+}
+
+.highlighted-date {
+  background-color: #effc80;
+  color: red;
+  border-radius: 50%;
+}
+
+.weekend {
+  background-color: #f8f8f8;
+  color: #333;
+  border-radius: 50%;
+}
+
+.dropdown-container {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.total-booking {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.fs-3 {
+  font-size: 1.75rem;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.me-2 {
+  margin-right: .5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-section {
+  margin-top: 55px;
+  width: 80%; 
+  max-width: 600px;
+  margin-left: 10%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.demo-inline-calendar-card {
+  width: 100%;
+  max-width: 450px;
+  margin-top: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0.5, 0.1, 0.1, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+ 
+  margin-right: auto; /* Centers the calendar */
+}
+
+/* .mat-calendar {
+  margin-top: 20px;
+} */
+
+.special-date {
+  background-color: rgb(13, 70, 55) !important;
+  color: white;
+  border-radius: 50%;
+}
+
+.booked-date {
+  background-color: rgba(3, 241, 78, 0.4) !important;
+  
+  border-radius: 50%;
+}
+
+
+
+@media (max-width: 991.98px) {
+  .d-flex {
+    flex-wrap: wrap;
+  }
+}
+.menu {
+  width: 100%;
+  margin-top: -360px; 
+  margin-left: 220px;
+  overflow-x: hidden;
+}
+
+.bgMenu {
+  background-color: rgb(89, 89, 151); /* Dark background */
+  max-width: 100%;
+  width: 500px;
+  color: white; /* Light text color for contrast */
+  margin: 0 auto;
+  padding: 15px; /* Added padding for better readability */
+  border-radius: 8px; /* Optional: rounded corners for better aesthetics */
+}
+
+.lunch ul, .dinner ul {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.dinner {
+  padding-left: 50px;
+}
+
+.disable-cell {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+
+.calender, .menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  max-width: 100%;
+}
+
+.bgMenu ul li {
+  padding-top: 13px;
+  font-size: 18px;
+  margin-bottom: 0;
+  padding-bottom: 13px;
+  color: white; /* Ensure the text color is white for contrast */
+}
+
+.cal {
+  width: 500px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .menu {
+    margin-top: 10px; /* Adjust margin for smaller screens */
+    margin-left: 15px;
+    width: 85%;
+  }
+
+  .cal, .bgMenu {
+    width: 100%; /* Ensure both the calendar and menu take full width */
+    margin: 0 10px; /* Add some margin for spacing */
+  }
+
+  .dinner {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .cal {
+    margin-bottom: 20px; /* Add space between calendar and menu */
+  }
+
+  .lunch ul, .dinner ul {
+    width: auto; /* Adjust width to fit the screen */
+  }
+}

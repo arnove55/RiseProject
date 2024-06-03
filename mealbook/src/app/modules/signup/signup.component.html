@@ -1,0 +1,50 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+  [fullScreen]="true">
+</ngx-spinner>
+<div class="bg-img">
+    <img src="./assets/images/bg.jpg " height="1000px" width="1000px" />
+</div>
+  <div class="logo">
+      <img src="./assets/images/logo.svg" />
+  </div>
+  <div class="heading1">
+      <p class="subheading1">Meal Facility</p>
+      <p class="subheading2">Sign Up to access your account</p>
+      
+      
+  </div>
+  
+  <form [formGroup]="signupForm">
+    <div class="logincredentials">
+      <label for="username" class="uname">User Name</label><br>
+      <input type="text" formControlName="username" placeholder="Username" class="username"><br>
+      <small *ngIf="signupForm.controls['username'].dirty && signupForm.hasError('required','username')" class="text-danger">* Username required</small><br>
+  
+      <label for="email" class="email">Email Id</label><br>
+      <input type="text" formControlName="email" placeholder="Email Id" class="emailid"><br>
+      <small *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')" class="text-danger">* Email Id Required</small><br>
+  
+      <label for="phone" class="phone">Phone number</label><br>
+      <input type="text" formControlName="phone" placeholder="Phone no." class="phoneno"><br>
+      <small *ngIf="signupForm.controls['phone'].dirty && signupForm.hasError('required','phone')" class="text-danger">* Phone number required</small><br>
+  
+      <label for="password" class="psw">Password</label><br>
+      <input type="password" formControlName="password" placeholder="Password" class="password"><br>
+      <span (click)="hidepsw()" class="fa {{eyeIcon}}"></span>
+      <small *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')" class="text-danger">* Password required</small><br>
+      
+      <label for="Confirmpsw" class="psw">Confirm Password</label><br>
+      <input type="password" formControlName="cpassword" placeholder="Confirm Password" class="password"><br>
+      <span (click)="hidepsw()" class="fa {{eyeIcon}}"></span>
+      <small *ngIf="signupForm.controls['cpassword'].dirty && signupForm.hasError('required','password')" class="text-danger">* Password required</small><br>
+      <p class="subheading3">Or <a routerLink="/login">Sign in</a> to access your account</p>
+      <button (click)="OnSignUp()">Sign up</button>
+    </div>
+  </form>
+  
+  
+ 
